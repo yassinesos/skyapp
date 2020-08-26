@@ -4307,7 +4307,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "p {\n  font-family: Lato;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYXBwLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxpQkFBaUI7QUFDbkIiLCJmaWxlIjoic3JjL2FwcC9hcHAuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbInAge1xuICBmb250LWZhbWlseTogTGF0bztcbn1cbiJdfQ== */";
+    __webpack_exports__["default"] = "p {\n  font-family: Lato;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImFwcC9hcHAuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLGlCQUFpQjtBQUNuQiIsImZpbGUiOiJhcHAvYXBwLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyJwIHtcbiAgZm9udC1mYW1pbHk6IExhdG87XG59XG4iXX0= */";
     /***/
   },
 
@@ -4509,7 +4509,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudHMvc2t5bGluZS9za3lsaW5lLmNvbXBvbmVudC5jc3MifQ== */";
+    __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJhcHAvY29tcG9uZW50cy9za3lsaW5lL3NreWxpbmUuY29tcG9uZW50LmNzcyJ9 */";
     /***/
   },
 
@@ -4836,34 +4836,34 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       _createClass(SkylineService, [{
         key: "getData",
         value: function getData(cho1, cho2) {
-          return this.http.get('https://skylineapplication.heroku.com/api/data/alldata/' + cho1 + '/' + cho2);
+          return this.http.get('http://skylineapplication.heroku.com/api/data/alldata/' + cho1 + '/' + cho2);
         }
       }, {
         key: "getSky2D",
         value: function getSky2D(skyline, cho1, cri1, cho2, cri2) {
           console.log("2D");
           console.log(skyline + " " + cri1 + " " + cri2);
-          return this.http.get('https://skylineapplication.heroku.com/api/data/' + skyline + '/' + cho1 + '/' + cri1 + '/' + cho2 + '/' + cri2);
+          return this.http.get('http://skylineapplication.heroku.com/api/data/' + skyline + '/' + cho1 + '/' + cri1 + '/' + cho2 + '/' + cri2);
         }
       }, {
         key: "getSky3D",
         value: function getSky3D(skyline, cho1, cri1, cho2, cri2, cho3, cri3) {
           console.log("3D");
           console.log(skyline + " " + cri1 + " " + cri2 + " " + cri3);
-          return this.http.get('https://skylineapplication.heroku.com/api/data/' + skyline + '/' + cho1 + '/' + cri1 + '/' + cho2 + '/' + cri2 + '/' + cho3 + '/' + cri3);
+          return this.http.get('http://skylineapplication.heroku.com/api/data/' + skyline + '/' + cho1 + '/' + cri1 + '/' + cho2 + '/' + cri2 + '/' + cho3 + '/' + cri3);
         }
       }, {
         key: "getSky4D",
         value: function getSky4D(skyline, cho1, cri1, cho2, cri2, cho3, cri3, cho4, cri4) {
           console.log("4D");
           console.log(skyline + " " + cri1 + " " + cri2 + " " + cri3 + " " + cri4);
-          return this.http.get('https://skylineapplication.heroku.com/api/data/' + skyline + '/' + cho1 + '/' + cri1 + '/' + cho2 + '/' + cri2 + '/' + cho3 + '/' + cri3 + '/' + cho4 + '/' + cri4);
+          return this.http.get('http://skylineapplication.heroku.com/api/data/' + skyline + '/' + cho1 + '/' + cri1 + '/' + cho2 + '/' + cri2 + '/' + cho3 + '/' + cri3 + '/' + cho4 + '/' + cri4);
         }
       }, {
         key: "getTemps",
         value: function getTemps() {
           console.log("temps");
-          return this.http.get('https://skylineapplication.heroku.com/api/data/temps');
+          return this.http.get('http://skylineapplication.heroku.com/api/data/temps');
         }
       }]);
 

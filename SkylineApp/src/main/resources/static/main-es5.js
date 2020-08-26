@@ -4307,7 +4307,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "p {\n  font-family: Lato;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImFwcC9hcHAuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLGlCQUFpQjtBQUNuQiIsImZpbGUiOiJhcHAvYXBwLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyJwIHtcbiAgZm9udC1mYW1pbHk6IExhdG87XG59XG4iXX0= */";
+    __webpack_exports__["default"] = "p {\n  font-family: Lato;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYXBwLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxpQkFBaUI7QUFDbkIiLCJmaWxlIjoic3JjL2FwcC9hcHAuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbInAge1xuICBmb250LWZhbWlseTogTGF0bztcbn1cbiJdfQ== */";
     /***/
   },
 
@@ -4509,7 +4509,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJhcHAvY29tcG9uZW50cy9za3lsaW5lL3NreWxpbmUuY29tcG9uZW50LmNzcyJ9 */";
+    __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudHMvc2t5bGluZS9za3lsaW5lLmNvbXBvbmVudC5jc3MifQ== */";
     /***/
   },
 
@@ -4836,34 +4836,34 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       _createClass(SkylineService, [{
         key: "getData",
         value: function getData(cho1, cho2) {
-          return this.http.get('http://skylineapplication.heroku.com/api/data/alldata/' + cho1 + '/' + cho2);
+          return this.http.get('https://skylineapplication.herokuapp.com/api/data/alldata/' + cho1 + '/' + cho2);
         }
       }, {
         key: "getSky2D",
         value: function getSky2D(skyline, cho1, cri1, cho2, cri2) {
           console.log("2D");
           console.log(skyline + " " + cri1 + " " + cri2);
-          return this.http.get('http://skylineapplication.heroku.com/api/data/' + skyline + '/' + cho1 + '/' + cri1 + '/' + cho2 + '/' + cri2);
+          return this.http.get('https://skylineapplication.herokuapp.com/api/data/' + skyline + '/' + cho1 + '/' + cri1 + '/' + cho2 + '/' + cri2);
         }
       }, {
         key: "getSky3D",
         value: function getSky3D(skyline, cho1, cri1, cho2, cri2, cho3, cri3) {
           console.log("3D");
           console.log(skyline + " " + cri1 + " " + cri2 + " " + cri3);
-          return this.http.get('http://skylineapplication.heroku.com/api/data/' + skyline + '/' + cho1 + '/' + cri1 + '/' + cho2 + '/' + cri2 + '/' + cho3 + '/' + cri3);
+          return this.http.get('https://skylineapplication.herokuapp.com/api/data/' + skyline + '/' + cho1 + '/' + cri1 + '/' + cho2 + '/' + cri2 + '/' + cho3 + '/' + cri3);
         }
       }, {
         key: "getSky4D",
         value: function getSky4D(skyline, cho1, cri1, cho2, cri2, cho3, cri3, cho4, cri4) {
           console.log("4D");
           console.log(skyline + " " + cri1 + " " + cri2 + " " + cri3 + " " + cri4);
-          return this.http.get('http://skylineapplication.heroku.com/api/data/' + skyline + '/' + cho1 + '/' + cri1 + '/' + cho2 + '/' + cri2 + '/' + cho3 + '/' + cri3 + '/' + cho4 + '/' + cri4);
+          return this.http.get('https://skylineapplication.herokuapp.com/api/data/' + skyline + '/' + cho1 + '/' + cri1 + '/' + cho2 + '/' + cri2 + '/' + cho3 + '/' + cri3 + '/' + cho4 + '/' + cri4);
         }
       }, {
         key: "getTemps",
         value: function getTemps() {
           console.log("temps");
-          return this.http.get('http://skylineapplication.heroku.com/api/data/temps');
+          return this.http.get('https://skylineapplication.herokuapp.com/api/data/temps');
         }
       }]);
 
@@ -4879,6 +4879,38 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     SkylineService = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
       providedIn: 'root'
     })], SkylineService);
+    /***/
+  },
+
+  /***/
+  "./src/environments/environment.prod.ts":
+  /*!**********************************************!*\
+    !*** ./src/environments/environment.prod.ts ***!
+    \**********************************************/
+
+  /*! exports provided: environment */
+
+  /***/
+  function srcEnvironmentsEnvironmentProdTs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "environment", function () {
+      return environment;
+    });
+    /* harmony import */
+
+
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! tslib */
+    "../node_modules/tslib/tslib.es6.js");
+
+    var environment = {
+      production: true
+    };
     /***/
   },
 
@@ -4910,17 +4942,33 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony import */
 
 
-    var _angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    /*! @angular/core */
+    "../node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+    /* harmony import */
+
+
+    var _angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
     /*! @angular/platform-browser-dynamic */
     "../node_modules/@angular/platform-browser-dynamic/__ivy_ngcc__/fesm2015/platform-browser-dynamic.js");
     /* harmony import */
 
 
-    var _app_app_module__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    var _environments_environment_prod__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    /*! ./environments/environment.prod */
+    "./src/environments/environment.prod.ts");
+    /* harmony import */
+
+
+    var _app_app_module__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
     /*! ./app/app.module */
     "./src/app/app.module.ts");
 
-    Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_2__["platformBrowserDynamic"])().bootstrapModule(_app_app_module__WEBPACK_IMPORTED_MODULE_3__["AppModule"]).then(function (ref) {
+    if (_environments_environment_prod__WEBPACK_IMPORTED_MODULE_4__["environment"].production) {
+      Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["enableProdMode"])();
+    }
+
+    Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_3__["platformBrowserDynamic"])().bootstrapModule(_app_app_module__WEBPACK_IMPORTED_MODULE_5__["AppModule"]).then(function (ref) {
       // Ensure Angular destroys itself on hot reloads.
       if (window['ngRef']) {
         window['ngRef'].destroy();

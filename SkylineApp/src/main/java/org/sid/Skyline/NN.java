@@ -13,7 +13,7 @@ public class NN <T extends Comparable<T>> {
 		      long start = System.currentTimeMillis();
 		skyline = sky(getTask(data,minDist(data,critere),task,critere),critere);
 		      long end = System.currentTimeMillis();
-			temps = = (end - start) / 1000F;
+			temps = (end - start) / 1000F;
 	}
 	
 	public List<Data<T,Double>> getSkyline(){   

@@ -258,7 +258,7 @@ public class DataControler<T extends Comparable<T>> {
 	
 	@GetMapping
 	@RequestMapping("/temps")
-	public double AlgoTemps() {
+	public float AlgoTemps() {
 		
 		return temps;
 	}

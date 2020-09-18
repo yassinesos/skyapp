@@ -8,7 +8,7 @@ public class DC <T extends Comparable<T>>{
 	
 	public static String[] critere;
 	private List<Data<T,Double>> skyline;
-	public double temps;
+	public float temps;
 	
 	public DC(String[] crtiere,List<Data<T,Double>> Data) {
 		this.critere = crtiere;
@@ -20,11 +20,11 @@ public class DC <T extends Comparable<T>>{
 			Data.sort((e1,e2) -> e1.dims.get(0).compareTo(e2.dims.get(0)) );
 		}
 		
-		long start = System.nanoTime();
+		long start = System.currentTimeMillis();
 		skyline = DCSkyline(Data);
-		long end = System.nanoTime();
+		long end = System.currentTimeMillis();
 
-		temps = (end - start)/1000000F;
+		temps = (end - start)/1000F;
 		critere = null;
 	}
 	

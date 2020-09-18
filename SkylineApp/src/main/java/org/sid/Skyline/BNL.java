@@ -6,7 +6,7 @@ package org.sid.Skyline;
 	//liste qui joue le role de la fenetre ou les points skyline seront stockes
      private List<Data<T,Double>> skyline;   
      private static String[] critere;
- 	 public double temps;
+ 	 public float temps;
 
      public BNL(List<Data<T,Double>> list,String[] critere) {   
          super();   
@@ -19,11 +19,11 @@ package org.sid.Skyline;
 		 }else {
 			 list.sort((e1,e2) -> e1.dims.get(0).compareTo(e2.dims.get(0)) );
 		 }
-		 long start = System.nanoTime();
+		 long start = System.currentTimeMillis();
 		 skyline = skcalculater(list);
-		long end = System.nanoTime();
+		long end = System.currentTimeMillis();
 
-		temps = (end - start)/1000000F;
+		temps = (end - start)/1000F;
 
 		 critere = null;
      }   

@@ -11,7 +11,7 @@ public class Index<T extends Comparable<T>>
 
 private List<List<Data<T,Double>>> ListDims;
 private List<Data<T,Double>> Skyline;
-public double temps;
+public float temps;
 
 	public Index(List<Data<T,Double>> Data,String[] critere) 
 	{
@@ -23,12 +23,12 @@ public double temps;
 			trieeData(ListDims.get(i),i,critere);
 		}
 		
-		long start = System.nanoTime();
+		long start = System.currentTimeMillis();
 		DC dc = new DC(critere,IndexSkyline(ListDims,critere));
 		
-		long end = System.nanoTime();
+		long end = System.currentTimeMillis();
 
-		temps = (end - start)/1000000F;
+		temps = (end - start)/1000F;
 		Skyline = dc.getSkyline();
 		
 	}

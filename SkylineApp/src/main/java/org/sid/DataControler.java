@@ -29,7 +29,7 @@ public class DataControler<T extends Comparable<T>> {
 	@Autowired
 	Data4dRepository data4dRepository;
 
-	public float temps = 0.0;
+	public float temps = 0.0f;
 
 
 	@GetMapping

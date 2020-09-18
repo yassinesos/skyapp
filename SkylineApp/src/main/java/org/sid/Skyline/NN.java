@@ -7,10 +7,13 @@ import java.util.List;
 public class NN <T extends Comparable<T>> {
 	
 	private List<Data<T,Double>> skyline;
-	public double temps = 0;
+	public float temps = 0;
 	public NN(List<Data<T,Double>> data,List<List<Data<T,Double>>> task,T[] critere) {
 		super();
+		      long start = System.currentTimeMillis();
 		skyline = sky(getTask(data,minDist(data,critere),task,critere),critere);
+		      long end = System.currentTimeMillis();
+			temps = = (end - start) / 1000F;
 	}
 	
 	public List<Data<T,Double>> getSkyline(){   

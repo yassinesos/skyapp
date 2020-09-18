@@ -29,7 +29,7 @@ public class DataControler<T extends Comparable<T>> {
 	@Autowired
 	Data4dRepository data4dRepository;
 
-	public double temps = 0.0;
+	public float temps = 0.0;
 
 
 	@GetMapping
@@ -64,17 +64,15 @@ public class DataControler<T extends Comparable<T>> {
 		else if(skyline.equals("Bitmap")) {
 			Bitmap<String> bm = new Bitmap<String>(arr,critere);
 			ArrayList<Data<String,Double>> skbm = new ArrayList<>();
-			temps = 0;
+				long start = System.currentTimeMillis();
 			for(Data<String,Double> da : bm.getListOfBitsDim()) {
-				long start = System.nanoTime();
 				Data<String,Double> sky = bm.Skyline(da);
-				long end = System.nanoTime();
-				temps = temps + (end - start)/1000000F;
 				if(sky != null) {
 					skbm.add(sky);
 				}
 			}
-
+				long end = System.currentTimeMillis();
+				temps = temps + (end - start)/1000F;
 			return skbm;
 		}
 		else if(skyline.equals("BNL")) {
@@ -149,15 +147,15 @@ public class DataControler<T extends Comparable<T>> {
 			Bitmap bm = new Bitmap(arr,critere);
 			List<Data<T, Double>> skbm = new ArrayList<>();
 			int size = bm.getListOfBitsDim().size();
-			long start = System.nanoTime();
+			long start = System.currentTimeMillis();
 			for(int i = 0; i < size ; i++) {
 				Data<T,Double> sky = bm.Skyline((Data) bm.getListOfBitsDim().get(i));
 				if(sky != null) {
 					skbm.add(sky);
 				}
 			}
-			long end = System.nanoTime();
-			temps = (end - start)/1000000F;
+			long end = System.currentTimeMillis();
+			temps = (end - start)/1000F;
 
 			return skbm;
 		}

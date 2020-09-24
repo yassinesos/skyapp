@@ -44,7 +44,7 @@ public class DataControler<T extends Comparable<T>> {
 		
 		String[] critere = {cri1,cri2};
 		ArrayList<Data<String,Double>> arr = new ArrayList<>();
-		ArrayList<Data<Long,Double>> arrID = new ArrayList<>();
+		ArrayList<Data<String,Double>> arrID = new ArrayList<>();
 
 		List<Data4D> ld = data4dRepository.findAll();
 		ArrayList<Double> arr2;
@@ -52,7 +52,7 @@ public class DataControler<T extends Comparable<T>> {
 			arr2 = new ArrayList<>();
 			arr2.add(getDataFinder(cho1, d)); arr2.add(getDataFinder(cho2, d));
 			arr.add(new Data<String,Double>(d.getName(),arr2));
-			arrID.add(new Data<Long,Double>(String.valueOf(d.getId()),arr2));
+			arrID.add(new Data<String,Double>(String.valueOf(d.getId()),arr2));
 
 		}
 		

@@ -52,7 +52,7 @@ public class DataControler<T extends Comparable<T>> {
 			arr2 = new ArrayList<>();
 			arr2.add(getDataFinder(cho1, d)); arr2.add(getDataFinder(cho2, d));
 			arr.add(new Data<String,Double>(d.getName(),arr2));
-			arrID.add(new Data<Long,Double>(d.getId(),arr2));
+			arrID.add(new Data<Long,Double>(String.valueOf(d.getId()),arr2));
 
 		}
 		

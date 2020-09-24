@@ -56,7 +56,7 @@ public class DataControler<T extends Comparable<T>> {
 
 		}
 		
-		if(skyline.equals("INDEX")) {
+		if(skyline.equals("INDE")) {
 			Index index = new Index(arrID,critere);
 			temps = index.temps;
 			return index.getSkyline();
@@ -202,7 +202,7 @@ public class DataControler<T extends Comparable<T>> {
 			arr.add(new Data<String,Double>(d.getName(),arr2));
 		}
 		
-		if(skyline.equals("INDEX")) {
+		if(skyline.equals("INDE")) {
 			Index index = new Index(arr,critere);
 			temps = index.temps;
 			return index.getSkyline();
